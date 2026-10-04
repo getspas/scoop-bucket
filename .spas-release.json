@@ -1,0 +1,9 @@
+{
+  "commit": "d643395514d4cfe8cfe0c1358e48936265405c99",
+  "files": {
+    "bucket/spas.json": "2e918f70142b73c42bef41698705b595990e47c1600ddaa7382862d59904c8cf"
+  },
+  "schema": 1,
+  "tag": "v0.1.2",
+  "version": "0.1.2"
+}

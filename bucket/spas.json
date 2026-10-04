@@ -1,0 +1,25 @@
+{
+    "version": "0.1.2",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/getspas/spas/releases/download/v0.1.2/spas_0.1.2_windows_amd64.zip",
+            "hash": "79bf238bbce18ad9532d8efd1a4ba788b119296677fe9b5d11634082af906120",
+            "bin": [
+                "spas.exe"
+            ]
+        },
+        "arm64": {
+            "url": "https://github.com/getspas/spas/releases/download/v0.1.2/spas_0.1.2_windows_arm64.zip",
+            "hash": "abe7835590fd055617522f688522553496f39f22c146b9ec2bc498905d137532",
+            "bin": [
+                "spas.exe"
+            ]
+        }
+    },
+    "homepage": "https://github.com/getspas/spas",
+    "license": "AGPL-3.0-only",
+    "description": "Manage private assets in Git workspaces",
+    "depends": [
+        "git"
+    ]
+}
