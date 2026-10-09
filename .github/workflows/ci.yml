@@ -41,6 +41,6 @@ jobs:
       - name: Add dependency bucket
         run: ./scoop/apps/scoop/current/bin/scoop.ps1 bucket add main
       - name: Install manifest and verify archive checksum
-        run: ./scoop/apps/scoop/current/bin/scoop.ps1 install ./bucket/bucket/spas.json
+        run: ./scoop/apps/scoop/current/bin/scoop.ps1 install --no-update-scoop "$env:GITHUB_WORKSPACE\bucket\bucket\spas.json"
       - name: Test installed command shim
         run: ./bucket/scripts/test-install.ps1
