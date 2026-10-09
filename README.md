@@ -19,7 +19,6 @@ scoop uninstall spas
 Uninstalling preserves SPAS configuration and private assets. The bucket does
 not change your PowerShell profile or move application data into Scoop folders.
 
-The initial v0.1.2 manifest uses the existing release archives. Their SHA-256
-hashes and GitHub build attestations were verified before publication. Future
-updates use SPAS's release publisher, which rejects version replacements and
-prevents downgrades.
+SPAS's release publisher updates the manifest after a stable release is published.
+The bucket's CI verifies archive checksums and tests installation on Windows
+for x64 and ARM64.

@@ -1,0 +1,44 @@
+name: Test manifest
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  install:
+    name: Install and test on ${{ matrix.runner }}
+    runs-on: ${{ matrix.runner }}
+    timeout-minutes: 20
+    strategy:
+      fail-fast: false
+      matrix:
+        runner: [windows-2025, windows-11-arm]
+    env:
+      SCOOP: ${{ github.workspace }}/scoop
+    defaults:
+      run:
+        shell: pwsh
+    steps:
+      - name: Check out bucket
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          path: bucket
+          persist-credentials: false
+      - name: Set up Scoop
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          repository: ScoopInstaller/Scoop
+          ref: e6aa3b366bdee8ed138c1e0f7b85192ebdd35d0f # v0.6.0
+          path: scoop/apps/scoop/current
+          persist-credentials: false
+      - name: Add dependency bucket
+        run: ./scoop/apps/scoop/current/bin/scoop.ps1 bucket add main
+      - name: Install manifest and verify archive checksum
+        run: ./scoop/apps/scoop/current/bin/scoop.ps1 install ./bucket/bucket/spas.json
+      - name: Test installed command shim
+        run: ./bucket/scripts/test-install.ps1
