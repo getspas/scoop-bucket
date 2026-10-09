@@ -36,8 +36,8 @@ jobs:
           ref: e6aa3b366bdee8ed138c1e0f7b85192ebdd35d0f # v0.6.0
           path: scoop/apps/scoop/current
           persist-credentials: false
-      - name: Initialize Scoop shim directory
-        run: New-Item -ItemType Directory -Path "$env:SCOOP/shims" -Force
+      - name: Initialize Scoop directories
+        run: New-Item -ItemType Directory -Path "$env:SCOOP/shims", "$env:SCOOP/buckets" -Force
       - name: Add dependency bucket
         run: ./scoop/apps/scoop/current/bin/scoop.ps1 bucket add main
       - name: Install manifest and verify archive checksum
