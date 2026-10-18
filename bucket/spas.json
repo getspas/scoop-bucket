@@ -1,5 +1,5 @@
 {
-  "version": "0.1.6",
+  "version": "0.2.0",
   "description": "Secure private asset sync for Git workspaces",
   "homepage": "https://github.com/getspas/spas",
   "license": "AGPL-3.0-only",
@@ -9,12 +9,12 @@
   "bin": "spas.exe",
   "architecture": {
     "64bit": {
-      "url": "https://github.com/getspas/spas/releases/download/v0.1.6/spas_0.1.6_windows_amd64.exe#/spas.exe",
-      "hash": "ac8dbae895ca1d469278ce2086b41bf0f601fde4626c9af54520a54dd83bdb4a"
+      "url": "https://github.com/getspas/spas/releases/download/v0.2.0/spas_0.2.0_windows_amd64.exe#/spas.exe",
+      "hash": "eea024cbd67fdec7c76b13755b12e7d40b10414464ec80802cc681bbdcfdd0b9"
     },
     "arm64": {
-      "url": "https://github.com/getspas/spas/releases/download/v0.1.6/spas_0.1.6_windows_arm64.exe#/spas.exe",
-      "hash": "7e7e7aa1d7f806effb3f12f695e8107e3778bac1248516b44c40b5ad2c88be6e"
+      "url": "https://github.com/getspas/spas/releases/download/v0.2.0/spas_0.2.0_windows_arm64.exe#/spas.exe",
+      "hash": "8afe6ff23f2ea7f9b27192cb384f06a812c5a48784a5fbdc8ccd8d35c705fdcc"
     }
   }
 }
